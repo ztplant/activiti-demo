@@ -1,0 +1,40 @@
+server:
+  port: 20001
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/activiti_demo?characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    username: root
+  thymeleaf:
+    cache: false
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  activiti:
+    async-executor-activate: false
+
+
+logging:
+  level:
+    root: debug
+    org.springframework.boot.autoconfigure.logging: INFO
+    org.apache.catalina.startup.DigesterFactory: ERROR
+    org.apache.catalina.util.LifecycleBase: ERROR
+    org.apache.coyote.http11.Http11NioProtocol: WARN
+    org.apache.sshd.common.util.SecurityUtils: WARN
+    org.apache.tomcat.util.net.NioSelectorPool: WARN
+    org.eclipse.jetty.util.component.AbstractLifeCycle: ERROR
+    org.hibernate: WARN
+    org.apache.tomcat : warn
+    sun.rmi : warn
+    org.springframework.beans.factory.support: warn
+    org.springframework.core: warn
+    org.apache.catalina: warn
+    org.springframework.security.access.prepost: warn
+#    org.activiti.engine: warn
+    org.springframework.jdbc: warn
+    org.springframework.security.access.method: warn
+#    org.activiti.spring: warn
+    org.apache.ibatis: warn
